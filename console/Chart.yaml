@@ -1,0 +1,6 @@
+apiVersion: v2
+name: console
+description: a helm chart for console web ui
+type: application
+version: 0.1.0
+appVersion: "4.20.0"

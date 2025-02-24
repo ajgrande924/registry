@@ -1,0 +1,10 @@
+ingress:
+  enabled: true
+  className: ""
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+  hosts:
+    - host: localhost
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
