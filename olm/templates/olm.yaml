@@ -374,19 +374,3 @@ spec:
       description: A PackageManifest is a resource generated from existing CatalogSources and their ConfigMaps
       deploymentName: packageserver
       containerPort: 5443
----
-apiVersion: operators.coreos.com/v1alpha1
-kind: CatalogSource
-metadata:
-  name: operatorhubio-catalog
-  namespace: olm
-spec:
-  sourceType: grpc
-  image: quay.io/operatorhubio/catalog:latest
-  displayName: Community Operators
-  publisher: OperatorHub.io
-  grpcPodConfig:
-    securityContextConfig: restricted
-  updateStrategy:
-    registryPoll:
-      interval: 60m
